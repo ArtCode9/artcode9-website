@@ -1,0 +1,186 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+html{scroll-behavior: smooth;}
+body{
+   background-color: black;
+}
+.maincore {
+   width: auto;
+   height: 110vh;
+   background-image: linear-gradient(to top, rgb(216, 245, 100) , #333);
+   margin: 2px auto;
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: "td hd"
+                        "td hd";
+}
+.menu {
+   grid-area: td;
+   width: auto;
+   height: auto;
+   margin: 6px;
+   padding: 6px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.menu2 {
+   grid-area: m2;
+   width: auto;
+   height: 80%;
+   padding: 3px;
+   display: flex;
+   flex-direction: column;
+   background-color: transparent;
+   border-radius: 8px;
+   background-color: transparent;
+   
+}
+.bt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 6px;
+  width: auto;
+  height: 64px;
+  border: 1px solid black;
+  outline: none;
+  background-color: yellow;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+  text-transform: uppercase;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%,
+    8% 100%, 0% 75%,0 0);
+}
+.bt:hover .bt_c {
+   background-color: black;
+   transition-property: background-color;
+   transition-duration: 2s;
+   color: yellow;
+   border: 2px solid yellow;
+}
+.bt_c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid black;
+  font-weight: bolder;
+  background-color: yellow;
+  color: black;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%,
+    8% 100%, 0% 75%,0 0);
+}
+.bt_lab {
+  font-size: 12px;
+  position: absolute;
+  bottom: -1px;
+  right: 8%;
+  padding: 0 5px;
+  background-color: yellow;
+  border-left: 3px solid red;
+  z-index: 3;
+}
+.iicon{
+   position: absolute;
+   width: 34px;
+   height: 34px;
+   border-radius: 12px;
+   left: 12px;
+   top:  12px;
+}
+.soc {
+   width: 45px;
+   height: 45px;
+   margin: 0px 14px;
+}
+.logo{
+   height: 10%;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+   border-bottom: 1px solid tomato;
+   border-left: 1px solid tomato;
+   border-right: 1px solid tomato;
+   border-top: 1px solid tomato;
+   clip-path: polygon(92% 0, 100% 25%, 100% 100%,
+    8% 100%, 0% 75%,0 0);
+}
+.logo_dock{
+   width: auto;
+   height: auto;
+   margin: 12px 14px;
+   border: 1px solid red;
+   border-radius: 50%;
+}
+.logo_dock:hover {
+   box-shadow: 0 0 3px 1px gold;
+   border: 3px solid gold;
+}
+.footer {
+   grid-area: f2;
+   bottom: 0;
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   border-top: 1px solid black;
+}
+
+.course {
+   grid-area: hd;
+   width: auto;
+   height: auto;
+   margin: 6px;
+   border: 2px solid gold;
+   background-image: linear-gradient(to bottom, steelblue , #333);
+   clip-path: polygon(96% 0, 110% 25%, 100% 100%,
+    4% 100%, 0% 95%,0 0);
+}
+
+
+/* media display responsive */
+/*
+   syntax:
+      @media media type and (condition: breakpoint) {
+            // CSS  rules
+      }
+*/
+
+@media screen and (max-width: 600px) {
+   .maincore{
+      width: auto;
+      height: 100vh;
+      background-color: lightcoral;
+      margin: 2px auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "hd"
+                           "td";
+   }
+   .menu {
+      grid-area: td;
+      background-color: blue;
+      width: auto;
+      height: 350px;
+   }
+   .course {
+      grid-area: hd;
+      background-color: green;
+      width: auto;
+      height: auto;
+   }
+}
